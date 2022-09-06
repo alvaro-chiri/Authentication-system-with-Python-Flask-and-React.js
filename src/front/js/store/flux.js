@@ -45,7 +45,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
         try {
           const resp = await fetch(
-            "https://3001-alvarochiri-authenticat-qvcmwen5go8.ws-us63.gitpod.io/api/token",
+            `${process.env.BACKEND_URL}/api/token`,
             opts
           );
           if (resp.status !== 200) {
